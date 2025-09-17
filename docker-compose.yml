@@ -4,7 +4,7 @@ services:
   flxwebapi:
     image: fabreguesm/flxwebapi:2.8.316-serverlicencia  
     ports:
-      - '5004:5000'
+      - '5011:5000'
     networks:
       - traefik      
     volumes:
