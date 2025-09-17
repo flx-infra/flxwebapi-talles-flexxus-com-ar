@@ -1,0 +1,33 @@
+version: '3.6'
+
+services:
+  flxwebapi:
+    image: fabreguesm/flxwebapi:2.8.312-serverlicencia  
+    ports:
+      - '5004:5000'
+    networks:
+      - traefik      
+    volumes:
+      - 'node_data:/app/data/'
+      - 'factura_data:/app/factura_electronica/'
+      - 'pdf_data:/app/public/pdf/'            
+    deploy:      
+      placement:
+        constraints: ["${NODE}"]          
+    environment:
+      - URL_LICENSESERVER=http://10.254.252.91:5006/
+    logging:
+      driver: loki
+      options:
+        loki-url: ${LOKI_URL}    
+volumes:
+  node_data:
+    name: "${SERVICE_NAME}_node-data"
+  factura_data:
+    name: "${SERVICE_NAME}_factura-data"
+  pdf_data:
+    name: "${SERVICE_NAME}_pdf-data"    
+networks:
+  traefik:
+    external:
+      name: traefik
