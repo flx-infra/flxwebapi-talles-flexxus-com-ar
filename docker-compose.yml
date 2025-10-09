@@ -2,7 +2,7 @@ version: '3.6'
 
 services:
   flxwebapi:
-    image: fabreguesm/flxwebapi:2.8.316-serverlicencia  
+    image: fabreguesm/flxwebapi:2.8.321-serverlicencia  
     ports:
       - '5011:5000'
     networks:
@@ -15,7 +15,7 @@ services:
       placement:
         constraints: ["${NODE}"]          
     environment:
-      - URL_LICENSESERVER=http://10.254.252.91:5006/
+      - URL_LICENSESERVER=http://10.250.0.68:5006/
     logging:
       driver: loki
       options:
