@@ -2,7 +2,7 @@ version: '3.6'
 
 services:
   flxwebapi:
-    image: fabreguesm/flxwebapi:2.8.327.1-serverlicencia  
+    image: fabreguesm/flxwebapi:2.8.329.2-serverlicencia  
     hostname: flxwebapi-talles-flexxus-com-ar
     ports:
       - '5011:5000'
