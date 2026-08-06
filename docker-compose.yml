@@ -16,7 +16,7 @@ services:
       placement:
         constraints: ["${NODE}"]          
     environment:
-      - URL_LICENSESERVER=http://10.250.0.68:5006/
+      - URL_LICENSESERVER=http://10.150.4.12:5006/
       - VERSION_LICENCIAS=2
     logging:
       driver: loki
