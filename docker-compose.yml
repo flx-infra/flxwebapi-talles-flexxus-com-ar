@@ -18,6 +18,7 @@ services:
     environment:
       - URL_LICENSESERVER=http://10.150.4.12:5006/
       - VERSION_LICENCIAS=2
+      - SECRET_LICENSESERVER=${SECRET_LICENSESERVER}
     logging:
       driver: loki
       options:
