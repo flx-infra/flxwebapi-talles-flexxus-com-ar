@@ -16,7 +16,7 @@ services:
       placement:
         constraints: ["${NODE}"]          
     environment:
-      - URL_LICENSESERVER=http://10.150.4.2:5006/
+      - URL_LICENSESERVER=https://licencias.flexxus.com.ar
       - VERSION_LICENCIAS=2
       - SECRET_LICENSESERVER=${SECRET_LICENSESERVER} 
     logging:
